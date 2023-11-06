@@ -1,7 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:localization/widgets/language_switch.dart';
 
-import 'content_screen.dart';
+import 'center_page.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -15,14 +15,16 @@ class Home extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            LanguageSwitch(),
+            Text(
+              'dashboard'.tr(),
+            ),
             SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => ContentScreen()));
+                    MaterialPageRoute(builder: (context) => CenterPage()));
               },
               child: const Text('Go to Next Page'),
             )

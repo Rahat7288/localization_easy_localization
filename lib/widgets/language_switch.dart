@@ -12,13 +12,20 @@ class LanguageSwitch extends StatelessWidget {
   Widget build(BuildContext context) {
     final languagePreference = Provider.of<LanguagePreference>(context);
     return ToggleSwitch(
+      minWidth: 40,
+      cornerRadius: 50,
       initialLabelIndex: languagePreference.language == 'en' ? 0 : 1,
-      labels: ["English", "বাংলা"],
+      labels: ["En", "বাং"],
       activeBgColors: [
-        [Colors.blue],
-        [Colors.green]
+        [
+          Color(0XFF404258),
+        ],
+        [
+          Color(0XFF404258),
+        ],
       ],
       activeFgColor: Colors.white,
+      inactiveBgColor: Colors.white,
       onToggle: (index) {
         if (index == 0) {
           context.setLocale(

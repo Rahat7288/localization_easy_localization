@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:localization/controllers/providers/language_preference.dart';
 import 'package:provider/provider.dart';
 
-import 'screens/home_page.dart';
+import 'screens/home/home_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
